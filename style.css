@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+  font-family: 'Fredoka One', cursive;
 }
 
 *, *:before, *:after {
@@ -18,11 +19,34 @@ body {
   justify-content: center;
 }
 
-#draw {
+.artboard {
+  max-width: 750px;
   background-color: white;
+  border: 5px solid rgba(0,0,0,0.2);
+  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  position: relative;
+  overflow: hidden;
 }
 
 .canvas__controls {
-  background-color: grey;
-  padding: 10px;
+  display: flex;
+  position: absolute;
+  bottom: 0;
+  width: 100%;
+  transform: translateY(100%) translateY(0px);
+  transition: all .3s;
+  flex-wrap: wrap;
+  background: rgba(0,0,0,0.1);
+}
+
+.artboard:hover .canvas__controls {
+  transform: translateY(0);
+}
+
+.artboard:hover .progress {
+  height: 15px;
+}
+
+.canvas__controls > * {
+  flex: 1;
 }
