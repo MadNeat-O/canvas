@@ -6,8 +6,8 @@
   <link href="https://fonts.googleapis.com/css2?family=Fredoka+One&display=swap" rel="stylesheet">
 </head>
 <body>
+  <div id="Slogan"></div>
   <div class="container">
-    <h1>Make some art!</h1>
     <div class="artboard">
       <canvas id="draw" width="800px" height="400px"></canvas>
       <div class="canvas__controls">
@@ -15,6 +15,9 @@
         <input type="range" id="width__control" min="1" max="100" step="5" value="1">
         <label for="color__control">Color Picker</label>
         <input type="color" id="color__control">
+        <label for="rainbow">Rainbow Paint</label>
+        <input type="checkbox" id="rainbow">
+        <a id="download" download="image.png"><button type="button" onClick="download()">Download</button></a>
       </div>
     </div>
   </div>

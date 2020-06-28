@@ -11,24 +11,38 @@ body {
   margin: 0;
   padding: 0;
   display: flex;
-  background: #7A419B;
+  /*background: #7A419B;*/
   min-height: 100vh;
-  background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);
-  background-size: cover;
+  /*background: linear-gradient(135deg, #7c1599 0%,#921099 48%,#7e4ae8 100%);*/
+  /*background-size: cover;*/
   align-items: center;
   justify-content: center;
+}
+
+#Slogan {
+  z-index: -1;
+  position: fixed;
+  font-size: 20pt;
+  line-height: 5px;
+  top: 0;
+  left: 0;
+  color: #999999;
+  text-align: justify;
+  margin-left: 6px;
+  margin-right: 6px;
 }
 
 .artboard {
   max-width: 750px;
   background-color: white;
   border: 5px solid rgba(0,0,0,0.2);
-  box-shadow: 0 0 20px rgba(0,0,0,0.2);
+  box-shadow: 10px 10px 20px rgba(0,0,0,0.2);
   position: relative;
   overflow: hidden;
 }
 
 .canvas__controls {
+  padding: 5px;
   display: flex;
   position: absolute;
   bottom: 0;
@@ -37,6 +51,11 @@ body {
   transition: all .3s;
   flex-wrap: wrap;
   background: rgba(0,0,0,0.1);
+}
+
+label {
+  padding: 5px;
+  margin-left: 5px;
 }
 
 .artboard:hover .canvas__controls {
